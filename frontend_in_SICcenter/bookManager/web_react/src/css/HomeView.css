@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+
+#root{
+    height: 100%;
+}
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100%;
+}
+
+/* 设置页眉的样式 */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+}
+
+/* 设置顶部导航栏的样式 */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    height: 50px;
+}
+
+/* 设置 topnav 链接的样式 */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav div {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    height: auto;
+}
+
+
+/* 设置topnav Search的样式*/
+.topnav.search {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    float: right;
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background: #dddddd;
+    height: auto;
+}
+
+
+/* 改变鼠标悬停时的颜色 */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* 创建并排的三个非等列 */
+.column.side {
+    width: 30%;
+}
+
+.column.main {
+    width: 70%;
+}
+
+
+/* 清除列之后的浮动 */
+
+.row{
+    height: calc(100% - 150px);
+    overflow: auto;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 响应式布局 - 创建堆叠而非并排的三列 */
+@media screen and (max-width:600px) {
+    .column.side,column.main {
+        width: 100%;
+    }
+}
+
+/*种类的侧边栏*/
+#siderow li{
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+#siderow li a{
+    text-decoration: none;
+    color:#333;
+}
+
+/*click 弹出的侧边栏*/
+#sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #dddddd;
+    overflow-x: hidden;
+    padding-top: 60px;
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#mainframe {
+    padding: 16px;
+    position: relative;
+    height: 100%;
+    background: white;
+    z-index: 2;
+    -webkit-transition: margin-left .5s;
+    transition: margin-left .5s;
+}
+
+#mainframe.open {
+    margin-left: 200px;
+}
+
+.click {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.bookImg{
+    height: 160px;
+    width: 160px;
+}
+
+
+.bookCard{
+    float: left;
+}
+
+
+/* 关于书籍样式的css*/
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 78px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 8px 6px;
+    float: left;
+    width: 25%;
+    height: auto;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mainbody{
+    height: 100%;
+}
+
+.searchBook{
+    width: 100%;
+    clear: left;
+}
+.searchBook>input{
+    width: 100%;
+}
