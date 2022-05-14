@@ -36,7 +36,6 @@ public class LoginControllers {
 
 
         UserAuth auth = userService.checkUser(username, password);
-        System.out.println(auth.getUserId());
         if(auth != null){
             // 说明存在这名用户
             //组装起json
